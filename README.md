@@ -7,7 +7,6 @@ A hands-on tutorial for building a **Pokedex single-page application** with Reac
 ![React Router](https://img.shields.io/badge/React_Router-7.x-ca4245?style=flat&logo=reactrouter&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat&logo=tailwindcss&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-5.x-6e9f18?style=flat&logo=vitest&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 > This is the React rewrite of the Express + EJS Pokedex in the folder above.
 
@@ -275,10 +274,6 @@ The submit job needs two repository secrets: `SUBMISSION_API_URL` and `SUBMISSIO
 - The Express version fetched Pokemon on the server. Here the browser does it, so loading a page of 20 Pokemon means 20 small requests — `loadMany` uses `Promise.all` to run them at the same time.
 - Tailwind v4 is configured in `src/index.css` with `@theme`, so there is no `tailwind.config.js`.
 - CI pins **Node 22**. Vitest 5 requires `^22.12 || ^24 || >=26`, so the Node 20 used by the Express version of this project will not work here.
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 

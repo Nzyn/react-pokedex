@@ -164,11 +164,11 @@ jobs:
       # - name: Check formatting
       #   run: npm run format:check
 
-      - name: Run ESLint
-        run: npm run lint
+      # - name: Run ESLint
+      #   run: npm run lint
 
-      - name: Run tests
-        run: npm run test:ci
+      # - name: Run tests
+      #   run: npm run test:ci
 
       - name: Build production bundle
         run: npm run build

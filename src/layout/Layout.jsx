@@ -34,19 +34,14 @@ function SearchBar() {
 
 function Header() {
   return (
-    
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2.5">
-         
-            
-        </Link>
+        <Link to="/" className="flex items-center gap-2.5"></Link>
         <SearchBar />
       </div>
     </header>
   );
 }
-
 
 function Footer() {
   return (

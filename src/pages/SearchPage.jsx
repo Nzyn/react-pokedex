@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import PokemonGrid, { TypeFilter } from '.../components/PokemonGrid';
+import PokemonGrid, { TypeFilter } from '../components/pokemongrid';
 import { Empty, ErrorMessage, Loading } from '../components/ui';
 import { PAGE_SIZE, get, loadMany, loadPokemon } from '../utils';
 

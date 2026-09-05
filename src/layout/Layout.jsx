@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 
+
+// The frame that every page is drawn inside: header, then the page, then footer.
+// React Router puts the current page where <Outlet /> is.
+
 function SearchBar() {
   const navigate = useNavigate();
 
@@ -32,25 +36,29 @@ function SearchBar() {
   );
 }
 
+
 function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
-       <Link
-  to="/"
-  className={
-    selectedType
-      ? 'shrink-0 rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-600 ring-1 ring-slate-200'
-      : 'shrink-0 rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white'
-  }
->
-  All
-</Link>
+        <Link to="/" className="flex items-center gap-2.5">
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-600 ring-2 ring-white">
+            <span className="h-3 w-3 rounded-full bg-white ring-[3px] ring-slate-900" />
+          </span>
+          <span className="text-lg font-extrabold tracking-tight text-slate-900">
+            Poke<span className="text-brand-600">dex</span>
+          </span>
+        </Link>
+           <Link to="/" className="flex items-center gap-2.5">
+          {/* ... the logo, unchanged ... */}
+        </Link>
+
         <SearchBar />
       </div>
     </header>
   );
 }
+
 
 function Footer() {
   return (
